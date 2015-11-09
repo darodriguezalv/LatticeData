@@ -27,9 +27,9 @@ version=version 0.8
 # Tags are comma separated with spaces allowed
 tags=
 
-homepage=
-tracker=
-repository=
+homepage=https://github.com/darodriguezalv/LatticeData.git
+tracker=https://github.com/darodriguezalv/LatticeData/issues
+repository=https://github.com/darodriguezalv/LatticeData.git
 icon=icon.png
 # experimental flag
 experimental=True
