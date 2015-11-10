@@ -10,10 +10,8 @@ With LatticeData you can
   - Calculate Morans I from a create o existing matrix
   - Scatter plot for identify spatial correlation
 
-
-
-> Contact
-[Diego Rodriguez][diego rodriguez twitter]
+>**Author: Diego Rodriguez <darodriguezalv@gmail.com>**
+[@darodriguezalv][diego rodriguez twitter]
  
  - Plugin home page: https://github.com/darodriguezalv/LatticeData.git
  - Tracker: [Browse and report bugs] [bugs]
