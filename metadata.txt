@@ -14,7 +14,7 @@ version=0.1
 author=Andrea Castillo, Juan Carrillo, Diego Rodriguez
 email=darodriguezalv@gmail.com
 description=This is an example plugin for lattice data.
-about=calculate Mora I for polygon layers.
+about=Calculated Moran's I for polygon layers and determines whether there is spatial correlation. It presents the scatter plot for the selected field. Require Pysal Library: https://github.com/pysal/pysal or copy folder pysal on librarys for Python QGIS "example C:\Program Files\QGIS Lyon\apps\Python27\Lib\site-packages".
 version=version 0.8
 
 # End of mandatory metadata
@@ -27,9 +27,9 @@ version=version 0.8
 # Tags are comma separated with spaces allowed
 tags=
 
-homepage=
-tracker=
-repository=
+homepage=https://github.com/darodriguezalv/LatticeData.git
+tracker=https://github.com/darodriguezalv/LatticeData/issues
+repository=https://github.com/darodriguezalv/LatticeData.git
 icon=icon.png
 # experimental flag
 experimental=True

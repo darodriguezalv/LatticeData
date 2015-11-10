@@ -32,8 +32,11 @@ import resources_rc
 from LaticeData_dialog import LatticeDataDialog
 import os.path
 """import pysal library for spatial statistics functions"""
-import pysal
-from pysal.weights.util import get_ids, get_points_array_from_shapefile, min_threshold_distance
+try:
+    import pysal
+    from pysal.weights.util import get_ids, get_points_array_from_shapefile, min_threshold_distance
+except:
+    QtGui.QMessageBox.warning(None,"Error","Oops! LatticeData Require Pysal.  Try again...")
 """import scipy library for distance function"""
 import scipy
 """import numpy library for array function"""
