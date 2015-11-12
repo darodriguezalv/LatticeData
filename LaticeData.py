@@ -30,13 +30,27 @@ from PyQt4 import QtGui
 import resources_rc
 # Import the code for the dialog
 from LaticeData_dialog import LatticeDataDialog
+import sys
+import site
 import os.path
 """import pysal library for spatial statistics functions"""
+from distutils.dir_util import copy_tree
+
+# copy subdirectory pysal
+fromDirectory = os.path.join(os.path.dirname(__file__), 'pysal')
+sitepackages=site.getsitepackages()
+toDirectory =sitepackages[1]+'\pysal'
+
 try:
     import pysal
     from pysal.weights.util import get_ids, get_points_array_from_shapefile, min_threshold_distance
 except:
-    QtGui.QMessageBox.warning(None,"Error","Oops! LatticeData Require Pysal.  Try again...")
+    copy_tree(fromDirectory, toDirectory)
+    QtGui.QMessageBox.warning(None,"Alert","Pysal was copied in: "+str(toDirectory))
+    import pysal
+    from pysal.weights.util import get_ids, get_points_array_from_shapefile, min_threshold_distance
+
+"""import scipy library for distance function"""
 """import scipy library for distance function"""
 import scipy
 """import numpy library for array function"""
@@ -45,7 +59,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter, FixedLocator
 from qgis.gui import QgsMessageBar, QgsMapLayerComboBox, QgsMapLayerProxyModel
-import sys
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject
 
 @pyqtSlot( result = str )
